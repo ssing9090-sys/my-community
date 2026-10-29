@@ -3,9 +3,6 @@
  */
 export const SITE_NAME = '현진이의 화장대';
 
-/** TODO: 실제 인스타그램 계정 주소로 교체하세요. */
-export const INSTAGRAM_URL = 'https://www.instagram.com/';
-
 export const PAGE_SIZE = 10;
 
 export const POST_CATEGORIES = ['메이크업 팁', '제품 리뷰', '피부 고민', '질문있어요', '자유'];

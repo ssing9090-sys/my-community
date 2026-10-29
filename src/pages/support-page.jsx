@@ -1,23 +1,19 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutlined';
 
 import FaqList from '../components/support/faq-list.jsx';
 import InquiryForm from '../components/support/inquiry-form.jsx';
 import MyInquiryList from '../components/support/my-inquiry-list.jsx';
 import { useAuth } from '../hooks/use-auth.js';
-import { INSTAGRAM_URL } from '../utils/site-config.js';
 
 const CONTACT_CARDS = [
   { icon: <AccessTimeIcon />, title: '운영 시간', description: '평일 10:00 ~ 18:00\n(주말·공휴일 휴무)', color: 'primary' },
   { icon: <MailOutlineIcon />, title: '1:1 문의', description: '아래 문의하기로 남겨 주시면\n이메일로 답변 드려요', color: 'secondary' },
-  { icon: <InstagramIcon />, title: '인스타그램', description: 'DM 으로도\n편하게 물어봐 주세요', color: 'success', href: INSTAGRAM_URL },
 ];
 
 /**
@@ -43,7 +39,7 @@ function SupportPage() {
 
       <Grid container spacing={ 2 }>
         { CONTACT_CARDS.map((card) => (
-          <Grid key={ card.title } size={ { xs: 12, md: 4 } }>
+          <Grid key={ card.title } size={ { xs: 12, md: 6 } }>
             <Paper sx={ { p: 3, height: '100%', textAlign: 'center' } }>
               <Box
                 sx={ {
@@ -65,11 +61,6 @@ function SupportPage() {
               <Typography variant="body2" color="text.secondary" sx={ { whiteSpace: 'pre-line', mt: 0.5 } }>
                 { card.description }
               </Typography>
-              { card.href && (
-                <Button href={ card.href } target="_blank" rel="noopener noreferrer" size="small" color={ card.color } sx={ { mt: 1 } }>
-                  인스타그램 바로가기
-                </Button>
-              ) }
             </Paper>
           </Grid>
         )) }

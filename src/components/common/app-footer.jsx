@@ -3,15 +3,14 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
-import { INSTAGRAM_URL, SITE_NAME } from '../../utils/site-config.js';
+import { SITE_NAME } from '../../utils/site-config.js';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 /**
- * AppFooter 컴포넌트 - 인스타그램 연결 버튼과 고객센터 링크가 있는 하단 영역
+ * AppFooter 컴포넌트 - 고객센터 링크가 있는 하단 영역
  *
  * Props: 없음
  *
@@ -46,16 +45,6 @@ function AppFooter() {
           </Typography>
         </Box>
         <Box sx={ { display: 'flex', gap: 1, flexWrap: 'wrap', justifyContent: 'center' } }>
-          <Button
-            href={ INSTAGRAM_URL }
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="contained"
-            startIcon={ <InstagramIcon /> }
-            sx={ { background: 'linear-gradient(45deg, #FDCB82, #F48FB1, #C39BD3)', color: '#FFFFFF' } }
-          >
-            인스타그램
-          </Button>
           <Button
             component={ RouterLink }
             to="/support"

@@ -3,12 +3,10 @@ import { Link as RouterLink, Navigate, useLocation, useNavigate } from 'react-ro
 import Alert from '@mui/material/Alert';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-import SocialLoginButtons from '../components/auth/social-login-buttons.jsx';
 import { useAuth } from '../hooks/use-auth.js';
 import { supabase } from '../lib/supabase.js';
 import { isValidEmail } from '../utils/validators.js';
@@ -19,7 +17,7 @@ const ERROR_MESSAGES = {
 };
 
 /**
- * LoginPage 컴포넌트 - 이메일 / 비밀번호 로그인 + 구글 / 카카오 계정 연결
+ * LoginPage 컴포넌트 - 이메일 / 비밀번호 로그인
  *
  * Props: 없음
  *
@@ -92,10 +90,6 @@ function LoginPage() {
             { isSubmitting ? '로그인 중...' : '로그인' }
           </Button>
         </Box>
-
-        <Divider sx={ { my: 3, color: 'text.secondary', fontSize: '0.85rem' } }>또는</Divider>
-
-        <SocialLoginButtons onError={ setErrorMessage } />
 
         <Box sx={ { textAlign: 'center', mt: 3, fontSize: '0.9rem', color: 'text.secondary' } }>
           아직 회원이 아니신가요?

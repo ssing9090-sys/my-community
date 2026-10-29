@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const FAQ_ITEMS = [
   {
     question: '회원가입은 어떻게 하나요?',
-    answer: '로그인 화면의 "회원가입" 버튼을 눌러 이름, 이메일, 비밀번호, 전화번호를 입력하면 돼요. 구글 / 카카오 계정으로도 바로 시작할 수 있어요.',
+    answer: '로그인 화면의 "회원가입" 버튼을 눌러 이름, 이메일, 비밀번호, 전화번호를 입력하면 바로 가입돼요.',
   },
   {
     question: '사진은 몇 장까지 올릴 수 있나요?',
