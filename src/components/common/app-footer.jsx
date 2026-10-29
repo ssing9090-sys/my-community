@@ -41,7 +41,7 @@ function AppFooter() {
         <Box sx={ { textAlign: { xs: 'center', md: 'left' } } }>
           <Typography variant="h6" sx={ { color: 'secondary.dark' } }>{ SITE_NAME }</Typography>
           <Typography variant="body2" color="text.secondary">
-            나한테 딱 맞는 화장법, 함께 찾아요 💕
+            나만의 화장법, 마음껏 자랑해요 💕
           </Typography>
         </Box>
         <Box sx={ { display: 'flex', gap: 1, flexWrap: 'wrap', justifyContent: 'center' } }>

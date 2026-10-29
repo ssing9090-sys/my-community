@@ -100,7 +100,7 @@ function PostListPage() {
         }) }
       >
         <Typography variant="h3" component="h1" sx={ { fontSize: { xs: '1.8rem', md: '2.6rem' }, color: 'primary.dark', mb: 1 } }>
-          나한테 맞는 화장법 찾기 💄
+          나만의 화장법 자랑하기 💄
         </Typography>
         <Typography color="text.secondary" sx={ { fontSize: { xs: '0.95rem', md: '1.1rem' } } }>
           피부 타입, 퍼스널 컬러, 꿀팁까지! 함께 나누는 우리들의 화장대
