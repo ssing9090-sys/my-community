@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
@@ -18,6 +18,7 @@ import { createPost, uploadPostImage } from '../utils/community-api.js';
  */
 function PostWritePage() {
   const navigate = useNavigate();
+  const { state } = useLocation();
   const { user, profile } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -49,7 +50,7 @@ function PostWritePage() {
         ✏️ 새 글 쓰기
       </Typography>
       { errorMessage && <Alert severity="error" sx={ { mb: 2 } }>{ errorMessage }</Alert> }
-      <PostForm submitLabel="등록하기" isSubmitting={ isSubmitting } onSubmit={ handleSubmit } onCancel={ () => navigate(-1) } />
+      <PostForm initialValues={ state?.prefill } submitLabel="등록하기" isSubmitting={ isSubmitting } onSubmit={ handleSubmit } onCancel={ () => navigate(-1) } />
     </Paper>
   );
 }

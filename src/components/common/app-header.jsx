@@ -18,7 +18,8 @@ import { useAuth } from '../../hooks/use-auth.js';
 import { SITE_NAME } from '../../utils/site-config.js';
 
 const NAV_ITEMS = [
-  { label: '게시판', path: '/' },
+  { label: '퍼스널컬러 진단', path: '/color' },
+  { label: '게시판', path: '/board' },
   { label: '글쓰기', path: '/posts/new' },
   { label: '고객센터', path: '/support' },
 ];

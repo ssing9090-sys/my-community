@@ -5,7 +5,9 @@ import Container from '@mui/material/Container';
 import AppFooter from './components/common/app-footer.jsx';
 import AppHeader from './components/common/app-header.jsx';
 import RequireAuth from './components/common/require-auth.jsx';
+import HomePage from './pages/home-page.jsx';
 import LoginPage from './pages/login-page.jsx';
+import PersonalColorPage from './pages/personal-color-page.jsx';
 import PostDetailPage from './pages/post-detail-page.jsx';
 import PostEditPage from './pages/post-edit-page.jsx';
 import PostListPage from './pages/post-list-page.jsx';
@@ -38,7 +40,9 @@ function App() {
       >
         <Container maxWidth="md" sx={ { py: 4, px: { xs: 2, md: 3 } } }>
           <Routes>
-            <Route path="/" element={ <PostListPage /> } />
+            <Route path="/" element={ <HomePage /> } />
+            <Route path="/board" element={ <PostListPage /> } />
+            <Route path="/color" element={ <PersonalColorPage /> } />
             <Route path="/posts/new" element={ <RequireAuth><PostWritePage /></RequireAuth> } />
             <Route path="/posts/:postId" element={ <PostDetailPage /> } />
             <Route path="/posts/:postId/edit" element={ <RequireAuth><PostEditPage /></RequireAuth> } />

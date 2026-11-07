@@ -5,9 +5,10 @@ export const SITE_NAME = '현진이의 화장대';
 
 export const PAGE_SIZE = 10;
 
-export const POST_CATEGORIES = ['메이크업 팁', '제품 리뷰', '피부 고민', '질문있어요', '자유'];
+export const POST_CATEGORIES = ['퍼스널컬러', '메이크업 팁', '제품 리뷰', '피부 고민', '질문있어요', '자유'];
 
 export const CATEGORY_COLORS = {
+  '퍼스널컬러': '#FFE9D6',
   '메이크업 팁': '#FCE4EC',
   '제품 리뷰': '#E3F2FD',
   '피부 고민': '#E0F7EF',

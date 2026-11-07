@@ -72,7 +72,7 @@ function PostDetailPage() {
       setErrorMessage('게시물을 삭제하지 못했어요.');
       return;
     }
-    navigate('/', { replace: true });
+    navigate('/board', { replace: true });
   };
 
   if (isLoading) return <PageLoader />;
@@ -80,7 +80,7 @@ function PostDetailPage() {
     return (
       <Box sx={ { textAlign: 'center' } }>
         <Alert severity="warning" sx={ { mb: 2 } }>{ errorMessage }</Alert>
-        <Button component={ RouterLink } to="/" startIcon={ <ArrowBackIcon /> }>목록으로</Button>
+        <Button component={ RouterLink } to="/board" startIcon={ <ArrowBackIcon /> }>목록으로</Button>
       </Box>
     );
   }
@@ -91,7 +91,7 @@ function PostDetailPage() {
   return (
     <Box sx={ { display: 'flex', flexDirection: 'column', gap: 3 } }>
       <Box>
-        <Button component={ RouterLink } to="/" startIcon={ <ArrowBackIcon /> } color="inherit">
+        <Button component={ RouterLink } to="/board" startIcon={ <ArrowBackIcon /> } color="inherit">
           목록으로
         </Button>
       </Box>

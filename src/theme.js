@@ -11,7 +11,7 @@ const theme = createTheme({
       main: '#F48FB1',
       light: '#FCE4EC',
       dark: '#D9628E',
-      contrastText: '#FFFFFF',
+      contrastText: '#4A1F33',
     },
     secondary: {
       main: '#81C4EE',
@@ -55,7 +55,15 @@ const theme = createTheme({
     MuiButton: {
       defaultProps: { disableElevation: true },
       styleOverrides: {
-        root: { borderRadius: 999, paddingLeft: 18, paddingRight: 18 },
+        root: {
+          borderRadius: 999,
+          paddingLeft: 18,
+          paddingRight: 18,
+          variants: [
+            { props: { variant: 'contained', color: 'primary' }, style: { '&:hover': { backgroundColor: '#F27AA3' } } },
+            { props: { variant: 'outlined', color: 'primary' }, style: { color: '#B83E6C' } },
+          ],
+        },
       },
     },
     MuiPaper: {

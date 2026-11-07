@@ -12,7 +12,7 @@ import { POST_CATEGORIES } from '../../utils/site-config.js';
 
 const EMPTY_VALUES = {
   title: '',
-  category: POST_CATEGORIES[0],
+  category: POST_CATEGORIES[1],
   rating: null,
   content: '',
   imageUrl: null,
